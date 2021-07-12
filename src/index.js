@@ -49,7 +49,7 @@ function calculate(){
     else if(oper == ''){
         answer = num1_int;
     }
-    var newCell = document.getElementById('history__table').insertRow();
+    var newCell = document.getElementById('history__table').insertRow(0);
     newCell.innerText = num1+oper+num2+'='+answer;
     num1 = answer;
     num2 = '';
