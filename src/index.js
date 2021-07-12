@@ -24,7 +24,10 @@ function display_num(added_num){
     document.getElementById('calc__display').textContent= num1+oper+num2;
 }
 function display_oper(added_oper){
-    if(num2 == ''){
+    if(num1 == ''){
+
+    }
+    else if(num2 == ''){
         oper = added_oper;
         phase = 1;
     }
