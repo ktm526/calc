@@ -55,6 +55,7 @@ function calculate(){
     num2 = '';
     oper = '';
     document.getElementById('calc__display').textContent= num1+oper+num2;
+    phase = 1;
 
 }
 function all_clear(){
@@ -62,4 +63,5 @@ function all_clear(){
     num2 = '';
     oper = '';
     document.getElementById('calc__display').textContent = '';
+    phase = 0;
 }
