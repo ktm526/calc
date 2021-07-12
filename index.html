@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="src/styles.css" />
     <title>계산기</title>
+    <script src="src/index.js"></script>
   </head>
   <body>
     <div class="App">
@@ -13,53 +14,48 @@
           <div class="calc__title">
             calculator
           </div>
-          <div class="calc__display"></div>
+          <div class="calc__display" id="calc__display"></div>
           <div class="calc__keyboard">
             <div class="calc__keyboard__main">
-              <div class="button calc__keyboard__ac">AC</div>
-              <div class="calc__keyboard__number">
+              <div class="button calc__keyboard__ac" onclick="all_clear();">AC</div>
+              <div class="calc__keyboard__number" >
                 <div class="calc__keyboard__number__line">
-                  <div class="num button button--blue">1</div>
-                  <div class="num button button--blue">2</div>
-                  <div class="num button button--blue">3</div>
+                  <div class="num button button--blue" onclick = "display_num(this.textContent);">1</div>
+                  <div class="num button button--blue" onclick = "display_num(this.textContent);">2</div>
+                  <div class="num button button--blue" onclick = "display_num(this.textContent);">3</div>
                 </div>
                 <div class="calc__keyboard__number__line">
-                  <div class="num button button--blue">4</div>
-                  <div class="num button button--blue">5</div>
-                  <div class="num button button--blue">6</div>
+                  <div class="num button button--blue" onclick = "display_num(this.textContent);">4</div>
+                  <div class="num button button--blue" onclick = "display_num(this.textContent);">5</div>
+                  <div class="num button button--blue" onclick = "display_num(this.textContent);">6</div>
                 </div>
                 <div class="calc__keyboard__number__line">
-                  <div class="num button button--blue">7</div>
-                  <div class="num button button--blue">8</div>
-                  <div class="num button button--blue">9</div>
+                  <div class="num button button--blue" onclick = "display_num(this.textContent);">7</div>
+                  <div class="num button button--blue" onclick = "display_num(this.textContent);">8</div>
+                  <div class="num button button--blue" onclick = "display_num(this.textContent);">9</div>
                 </div>
               </div>
-              <div class="num button button--blue--big">0</div>
+              <div class="num button button--blue--big" onclick = "display_num(this.textContent);">0</div>
             </div>
             <div class="calc__keyboard__operator">
-              <div class="operator button button--deepblue">
-                +
-              </div>
-              <div class="operator button button--deepblue">
-                −
-              </div>
-              <div class="operator button button--deepblue">
-                ×
-              </div>
-              <div class="operator button button--deepblue">
-                ÷
-              </div>
-              <div class="operator button button--pink">
-                =
-              </div>
+              <div class="operator button button--deepblue" onclick = "display_oper(this.textContent);">+</div>
+              <div class="operator button button--deepblue" onclick = "display_oper(this.textContent);">−</div>
+              <div class="operator button button--deepblue" onclick = "display_oper(this.textContent);">×</div>
+              <div class="operator button button--deepblue" onclick = "display_oper(this.textContent);">÷</div>
+              <div class="operator button button--pink" onclick = "calculate();">=</div>
             </div>
           </div>
         </div>
         <div class="history">
           <div class="history__title">History</div>
-          <table class="history__table"></table>
+          <table class="history__table" id="history__table">
+
+
+          </table>
         </div>
       </div>
     </div>
+ 
   </body>
+
 </html>
